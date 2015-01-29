@@ -1,0 +1,181 @@
+<div></div>
+
+<section id="banner">
+          <div id="slider">
+            <ul>
+                <li><img src="img/banner1.png" width='1641px' height='259px' alt="Shoe Banner"/></li> 
+                <li><img src="img/banner2.png" width='1641px' height='259px' alt="Shoe Banner"/></li>
+                <li><img src="img/banner3.png" width='1641px' height='259px' alt="Shoe Banner"/></li>
+                <li><img src="img/banner4.png" width='1641px' height='259px' alt="Shoe Banner"/></li>
+                <li><img src="img/banner5.png" width='1641px' height='259px' alt="Shoe Banner"/></li>
+                <li><img src="img/banner6.png" width='1641px' height='259px' alt="Shoe Banner"/></li>
+            </ul>
+        </div>
+    </section>
+    <h2>What we have for YOU!</h2>
+<p>Latest pick ups, Newest releases and the best <strong>Heat</strong> if thats what your looking for then your on the correct site. Jordans all the way down to New Balances if you can wear it on your feet we have picked it up and did a review on it. Nothing less then perfection when we review the hottest kicks in the game check out our video blogs that will be posted bi-weekly to see what we got new.</p>
+</section>
+<center><strong><h3>Countdown</h3></strong></center>  
+<center>
+    <ul>
+      <h5><strong>The ART of The Campout</strong></h5>
+         <img class='images' src="img/campout.jpg" width='500px' alt="Blog Pic"/>
+        <p>We are currently 16 hours away from 10am.
+I’ve rushed here, like the last 100 people who joined the line, and I’m definitely not prepared. I mean, I was good to go from midnight to 10am, but not 5pm to 10am the following morning. It’s at this point that an altered state of consciousness takes over. I’m introducing myself over and over. ‘Mark, from Saint Side’, ‘Hi, Mark From Saint Side’, ‘YEAH THAT’S ME, Mark... from Saint Side.’</p>
+<button class="slideup1">Read More</button>      
+<div id="animate1">
+    <div class='whatscomming' ng-repeat="post in posts"> 
+       <h5>{{post.author}}</h5>
+       <p>{{post.body}}</p> 
+    </div>
+    <form ng-submit="addPost1()">
+        <div>
+          <textarea ng-model="newPost1.body" placeholder="body"></textarea>
+        <input type="text" ng-model="newPost1.author" placeholder="name"> 
+        </div>
+        <div>
+          <button type="submit">Save Heat</button>
+        </div>
+      </form>   
+</div><!-- close animate div -->
+ </ul>
+</center>
+<center>
+        <ul>
+            <h5><strong>DON C X AIR JORDAN COLLAB??!</strong></h5>
+               <img class='images' src="img/campout.jpg"  width='500px' alt="Blog Pic" />
+            <p>With the release of the Air Jordan 4 “Oreo” recently pushed back, the sneaker’s anticipation rises with every passing day.This coveted colorway of the Air Jordan 4 has’t been seen since 1999, and sneakerheads are getting restless.  What many have considered a grail for years is finally coming back to retailers, and everyone wants a pair.Originally set to release February 1st for $190,the sneaker will now be heading to retailers February 21st for the same price.With a couple weeks added to the release, will you be copping the Air Jordan 4 “Oreo?”</p><button class="slideup3">Read More</button>
+    <div id="animate3">
+        <div class='whatscomming' ng-repeat="post in donc">    
+         <h5>{{post.author}}</h5>
+          <p>{{post.body}}</p>
+        </div>
+          <form ng-submit="addPost2()">
+            <div>
+              <textarea ng-model="newPost2.body" placeholder="body"></textarea>
+             <input type="text" ng-model="newPost2.author" placeholder="name"> 
+            </div>
+            <div>
+              <button type="submit">Save Heat</button>
+            </div>
+          </form>
+      </div><!-- close animate div -->
+   </ul>
+</center>
+<center>
+        <ul>
+            <h5><strong>Oreo 4 Release</strong></h5>
+               <img class='images' src="img/campout.jpg"  width='500px' alt="Blog Pic" />
+            <p>With the release of the Air Jordan 4 “Oreo” recently pushed back, the sneaker’s anticipation rises with every passing day.This coveted colorway of the Air Jordan 4 has’t been seen since 1999, and sneakerheads are getting restless.  What many have considered a grail for years is finally coming back to retailers, and everyone wants a pair.Originally set to release February 1st for $190,the sneaker will now be heading to retailers February 21st for the same price.  With a couple weeks added to the release, will you be copping the Air Jordan 4 “Oreo?”</p><button class="slideup2">Read More</button>
+
+<div id="animate2">
+    <div class='whatscomming' ng-repeat="post in release">    
+     <h5>{{post.author}}</h5>
+      <p>{{post.body}}</p>  
+    </div>
+      <form ng-submit="addPost3()">
+        <div>
+          <textarea ng-model="newPost3.body" placeholder="body"></textarea>
+         <input type="text" ng-model="newPost3.author" placeholder="name">
+        </div>
+        <div>
+          <button type="submit">Save Heat</button>
+        </div>
+      </form>
+    <!--</div>-->
+</div><!-- close animate div -->
+    </ul>
+</center>
+
+<!-- Chatroom -->
+<div class="chatbox">
+    <div ng-if="user.twitter.username">
+	<p class='twitter' ng-model="userloggedin.username">Whats Up {{user.twitter.username}}</p>
+</div>
+    <div ng-if="user.twitter.username == undefined || user.twitter.username == '' || !user.twitter.username">
+	<p class='signin'><a ng-click="authObj.$authWithOAuthPopup('twitter')">Sign in via Twitter</a>.</p>
+</div>
+    <img class='chatImg' width='700px' src='img/chatbg.png'/><!--- sneaker logos -->
+<div class="chatroom">
+	<!-- where messages from the database are fetched and displayed -->
+	<div class="messageArea" ng-repeat="message in messages">
+		<p>{{message.body}} <strong>- {{message.author}}</strong></p> 
+	</div>
+	<!-- chatroom form  -->
+	<form class="chatForm" ng-submit="sendMessage()">
+		<input class="chatInput" type="text" ng-model="newMessage.body" placeholder="Type Message Here . . ." maxlength="200" autofocus required /><button class="send" type="submit">Heat</button>
+	</form>
+</div>
+</div>
+
+<!-------- Cop Or Drop 
+    This section is based on what the user thinks! thhis is how the articles will be picked for the home page the shoes with the most 'Cop' picks will get an article/review on them lettings users know when the shoe is coming more pics and exclusive details about the shoe;Thats how ill know what reviews/aritcles to do 
+
+didnt have time to add gameafacation
+-------->
+<div id='hotnot'> 
+    <center><strong><h3>Cop or Drop</h3></strong></center>
+    <ul class='cop'>
+    <!-- Kicks Image -->
+		<img class="cdImg" src="img/peral4gs.png"/>
+    <div class="">
+			<form class="copSection" ng-controller="copDrop" ng-submit="coppoll1()">
+				<p class='cd'><label><input  ng-model="poll1.result" type="radio" value="cop" />Cop</label></p>
+				<p class='cd'><label><input ng-model="poll1.result" type="radio" value="drop" />Drop</label></p>				 <p><button class='cd' class="save">Heat</button></p><br />
+            
+			</form>
+		</div>
+    </ul>
+       <!-- Kicks Image -->
+    <ul class='cop'>
+		<img class="cdImg"  src="img/AJTiffany5.png "/>
+    <div class="">
+			<form class="copSection" ng-controller="copDrop" ng-submit="coppoll2()">
+				<p class='cd'><label><input  ng-model="poll2.result" type="radio" value="cop" />Cop</label></p>
+				<p class='cd'><label><input ng-model="poll2.result" type="radio" value="drop" />Drop</label></p>				 <p><button class='cd' class="save">Heat</button></p><br />
+           
+			</form>
+		</div>
+    </ul>
+    <ul class='cop'>
+       <!-- Kicks Image -->
+		<img class="cdImg"  src="img/elime.png"/>
+    <div class="">
+			<form class="rcopSection" ng-controller="copDrop" ng-submit="coppoll3()">
+				<p class='cd'><label><input  ng-model="poll3.result" type="radio" value="cop" />Cop</label></p>
+				<p class='cd'><label><input ng-model="poll3.result" type="radio" value="drop" />Drop</label></p>				 <p><button class='cd' class="save">Heat</button></p><br />
+               
+			</form>
+		</div>
+        </ul>
+    
+</div>
+<script>
+    //slider 
+	  $(document).ready(function(){	
+				$("#slider").easySlider({
+					auto: true, 
+					continuous: true
+				});
+			});
+    
+     //Hides on load
+        $('#animate1').hide()
+        //Shows Section When Button Clicked
+        $(".slideup1").click(function(){
+            $("#animate1").slideToggle(500);   
+        });
+    
+        $('#animate2').hide()
+        //Shows Section When Button Clicked
+        $(".slideup2").click(function(){
+            $("#animate2").slideToggle(500);
+            
+        });
+          $('#animate3').hide()
+        //Shows Section When Button Clicked
+        $(".slideup3").click(function(){
+            $("#animate3").slideToggle(500);     
+        });
+     
+    </script>

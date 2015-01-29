@@ -1,0 +1,59 @@
+<p class="text-info">
+    <img ng-src="img/products/{{product.detail}}.jpg" alt="{{product.name}}"/>
+    {{product.name}}: {{product.description}}<br />
+    <div class="addthis_native_toolbox"></div>
+</p>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span8">
+
+            <!-- product info -->
+            <table class="table table-bordered">
+
+                <tr class="main">
+                    <td class="tdRight" colspan="3" >
+                        <a href="index.html#/cart" title="go to shopping cart" ng-disabled="cart.getTotalCount() < 1">
+                            <i class="icon-shopping-cart" />
+                            <b>{{cart.getTotalCount()}}</b> items, <b>{{cart.getTotalPrice() | currency}}</b>
+                            <span ng-show="cart.getTotalCount(product.detail) > 0"><br />this item is in the cart</span>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tdRight"><b>Size</b></td>
+                    <td class="tdCenter"><h2>{{product.size}}</h2></td>
+                    <td />
+                </tr>
+                <tr ng-repeat="(boxName, boxValue) in product.box">
+                    <td class="tdRight"><b>{{boxName}}</b></td>
+                    <td class="tdCenter"><img ng-src="img/r{{boxValue}}.png" alt="{{boxValue}}" /></td>
+                    <td>
+                        {{store.resaleRange[boxValue]}}
+                        comapred to ebay.
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!-- buttons -->
+        <div class="span4">
+            <button 
+                class="btn btn-block btn-success" 
+                ng-click="cart.addItem(product.detail, product.name, product.price, +1)">
+                <i class="icon-shopping-cart icon-white" /> add to cart
+            </button>
+            <button 
+                class="btn btn-block btn-danger" 
+                ng-click="cart.addItem(product.detail, product.name, product.price, -10000)"
+                ng-disabled="cart.getTotalCount(product.detail) < 1">
+                <i class="icon-trash icon-white" /> remove from cart
+            </button>
+            <button 
+                class="btn btn-block" 
+                onclick="window.location.href='index.html#/store'">
+                <i class="icon-chevron-left" /> back to store
+            </button>
+        </div>
+    </div>
+</div>
+

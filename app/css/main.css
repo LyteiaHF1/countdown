@@ -1,0 +1,202 @@
+/*
+Lyteia "Lyte" Kitchen 
+SMS
+Countdown Sneaker APP
+*/
+
+a a:visited{
+ color: #f4eb32;
+}
+
+a:visited{
+  color: 
+}
+*{
+	margin: 0;
+	padding:0;
+}
+
+header{
+    background-color: #040000;
+    width: 100%;
+    height: 100%;
+ }
+.left{
+	float: left;
+	margin-left: 1%;
+}
+
+
+wrapper{
+    background-color: white;
+    width:  960px;    
+}
+
+#logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#welcome{
+    margin: 15px;
+    padding: 4px;
+}
+
+/* Easy Slider */
+section#banner{
+    margin-top: 35px;
+     
+}
+
+#slider{
+
+    margin-left: -55px;
+    width: 1840px;
+    
+}
+
+#slider ul, #slider li{
+    margin: 0;
+	padding: 0;
+	list-style: none;
+    width: 1641px; 
+}
+
+#slider li{ 
+	width: 1641px;/*960*/
+	height: 700px;/*459*/
+	overflow: hidden; 
+  
+}
+
+#prevBtn, #nextBtn,
+#slider1next, #slider1prev{ 
+	display: block;
+	width: 19px;
+	height: 24px;
+	position: absolute;
+	left: 20px;
+	top: 218px;
+	z-index: 1000;
+}
+
+.graphic, #prevBtn, #nextBtn, #slider1prev, #slider1next{
+    margin: 0;
+    padding: 0;
+    display: block;
+    overflow: hidden;
+    text-indent: -8000px;
+}
+
+/*Home Page*/
+
+ul{
+  width: 30%;
+  float: left;  
+}
+
+.images{
+    border: 3px solid #f4eb32;
+}
+
+#animate1,#animate2,#animate3,#animate4,#animate5,#animate6{
+    background-color: #f6ec32;
+    color: black;
+    border: 1px solid #d3d3d3;
+    height: 500px;
+}
+
+#animate1 form{
+    width: 100px;
+    margin-bottom: -150px;
+}
+
+.whatscomming p{
+    border-bottom: 1px solid #d3d3d3;
+}
+
+/* Chat section */
+.chatbox {
+    clear: both;
+    border-top: 1px solid #d3d3d3;
+    margin-top: -15px;
+    width:96%;
+    background-color: #040000;
+    overflow: scroll;
+}
+
+.chatbox p{
+ color: #f6ec32;
+}
+
+.chatroom{
+    padding: 10px;
+    height: 700px;   
+}
+
+.chatImg{
+    float: right;
+    margin-right: -120px;
+    padding: 20px;
+}
+
+.messageArea{
+	font-size: 89%;
+    color: white;     
+}
+
+.chatInput{ 
+    display: block;	
+    margin-top: 140px;
+    width: 1050px;
+     height:39px;
+}
+
+button.send{
+    margin-top: 140px;
+	width: 100px;
+    height: 25px;
+    margin-right: -35px;    
+}
+
+/*Cop or Not Section*/
+#hotnot{
+    border-top: 1px solid #d3d3d3;
+    margin: 15px;
+}
+.cd{
+    float: left;
+    padding: 5px;
+    
+}
+
+.cdImg{
+    border: 2px solid #f6ec32;
+    width: 350px;
+}
+
+ ul.cop{
+    width: 30%;
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+
+/*store/shoping cart basic */
+.table td.tdRight {
+  text-align: right;
+}
+.table td.tdCenter {
+  text-align: center;
+}
+.table-nonfluid {
+   width: auto;
+}
+.main{
+    background-color: #040000;
+}
+
+tr.main{
+    background-color: #040000;
+}
